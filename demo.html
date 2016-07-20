@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <style>
+        .inner {
+            background-color: #dedede;
+            margin: 5px;
+            min-height:30px;
+            padding: 5px;
+            border: 1px solid #aaa;
+        }
+
+        .inner2 {
+            background-color: #dedede;
+            min-height:30px;
+            margin: 5px;
+            padding: 5px;
+            border: 1px solid #aaa;
+        }
+
+        .inner-sub {
+            background-color: #0a629a;
+            margin: 5px;
+            padding: 5px;
+            min-height:30px;
+        }
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="dist/layout.css">
+    <link rel="stylesheet" type="text/css" href="dist/components.css">
+</head>
+<body>
+    <div id="app" class="grid">
+        <h1>Grid</h1>
+        <h4>5 columns - equal</h4>
+        <div class="row">
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+        </div>
+
+        <h4>5 columns - different width</h4>
+        <div class="row">
+            <div class="col-1"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-4"><div class="inner"></div></div>
+            <div class="col-2"><div class="inner"></div></div>
+            <div class="col-1"><div class="inner"></div></div>
+        </div>
+
+        <h4>2 columns</h4>
+        <div class="row">
+            <div class="col-5"><div class="inner"></div></div>
+            <div class="col-5"><div class="inner"></div></div>
+        </div>
+
+        <h4>sub grid</h4>
+        <div class="row">
+            <div class="col-5" style="background-color:#ddd;">
+                <p>
+                     --
+                </p>
+            </div>
+            <div class="col-5" style="background-color:#ddd;">
+
+                <div class="row">
+                    <div class="col-5"><div class="inner-sub"></div></div>
+                    <div class="col-5"><div class="inner-sub"></div></div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3"><div class="inner-sub"></div></div>
+                    <div class="col-4"><div class="inner-sub"></div></div>
+                    <div class="col-3"><div class="inner-sub"></div></div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <h1>Components</h1>
+
+        <div class="row">
+            <div class="col-5">
+                <div class="box">
+                    <div class="heading">
+                        <h4>Box (Panel)</h4>
+                    </div>
+                    <div class="body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula. Aliquam congue dolor quis odio ultricies, nec suscipit erat elementum. Nunc id sem enim. Proin non tincidunt ex. Proin placerat varius aliquam. Donec in elementum dui, ut vehicula nibh. Etiam volutpat mattis urna sed faucibus. Quisque cursus quam eget egestas consequat. Mauris in enim dui. 
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="box darkbox">
+                    <div class="heading">
+                        <h4>Darkbox (Panel)</h4>
+                    </div>
+                    <div class="body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula. Aliquam congue dolor quis odio ultricies, nec suscipit erat elementum. Nunc id sem enim. Proin non tincidunt ex. Proin placerat varius aliquam. Donec in elementum dui, ut vehicula nibh. Etiam volutpat mattis urna sed faucibus. Quisque cursus quam eget egestas consequat. Mauris in enim dui. 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <div class="box darkbox">
+            <div class="heading">
+                <h4>Button</h4>
+            </div>
+            <div class="body">
+                <button class="btn">Save</button> <button class="btn btndark">Save</button> <button class="btn btnblue">Save</button> 
+                <br />
+                <input type="text" class="input" value="hello" placeholder="placeholder" />
+            </div>
+        </div>
+
+        <br /><br /><br /><br /><br />
+
+    </div>
+</body>
+</html>

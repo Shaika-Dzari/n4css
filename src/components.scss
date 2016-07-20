@@ -1,0 +1,67 @@
+/* 
+ * Components 
+ * Panel, button, inputs
+ */
+
+$border-normal: #ccc;
+$border-dark: #111;
+$padding-normal: 10px;
+$padding-small: 5px;
+$color-grey: #f8f8f8;
+$color-dark: #444;
+$color-white: #fff;
+$color-blue: #1872ab;
+$color-darkblue: #0d5f94;
+/* Box */
+.box {
+    border: 1px solid $border-normal;
+
+    .heading {
+        padding: $padding-small;
+        background-color: $color-grey;
+        border-bottom: 1px solid $border-normal;
+
+        h1, h2, h3, h4, h5 {
+            margin: 3px;
+            font-weight: 500;
+        }
+    } 
+
+    .body {
+        padding: $padding-normal;
+    }
+}
+
+.box.darkbox {
+    border: 1px solid $border-dark;
+    .heading {
+        background-color: $color-dark;
+        color: $color-white;
+        border-bottom: 1px solid $border-dark;
+    }
+}
+
+/* Button */
+button.btn {
+    border: 1px solid $border-normal;
+    background-color: $color-grey;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+button.btn.btndark {
+    background-color: $color-dark;
+    color: $color-white;
+    border-bottom: 1px solid $border-dark;
+}
+
+button.btn.btnblue {
+    background-color: $color-blue;
+    color: $color-white;
+    border-bottom: 1px solid $color-darkblue;
+}
+
+/* input */
+input[type=text].input {
+    border: 1px solid $border-normal;
+}
