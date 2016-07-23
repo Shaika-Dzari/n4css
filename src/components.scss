@@ -70,6 +70,10 @@ $font-bold-500: 600;
         color: $color-white;
         border-bottom: 1px solid $border-dark;
     }
+
+    .body {
+        overflow: auto;
+    }
 }
 
 
