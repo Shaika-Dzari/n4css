@@ -4,6 +4,29 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
     <style>
+        html, body {
+            margin:0; 
+            padding: 0;
+        }
+        #page {
+        }
+
+        #header, footer {
+            background-color: #2186c6;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        footer {
+            height:200px;
+            margin-top:40px;
+        }
+
+        #header-inner, #footer-inner,  #content {
+            margin: 0 auto;
+            width: 1280px;    
+        }
+
         .inner {
             background-color: #dedede;
             margin: 5px;
@@ -21,7 +44,7 @@
         }
 
         .inner-sub {
-            background-color: #0a629a;
+            background-color: #2186c6;
             margin: 5px;
             padding: 5px;
             min-height:30px;
@@ -30,115 +53,170 @@
     </style>
     <link rel="stylesheet" type="text/css" href="dist/layout.css">
     <link rel="stylesheet" type="text/css" href="dist/components.css">
+    <link rel="stylesheet" type="text/css" href="dist/utilities.css">
 </head>
 <body>
-    <div id="app" class="grid">
-        <h1>Grid</h1>
-        <h4>5 columns - equal</h4>
-        <div class="row">
-            <div class="col-2"><div class="inner"></div></div>
-            <div class="col-2"><div class="inner"></div></div>
-            <div class="col-2"><div class="inner"></div></div>
-            <div class="col-2"><div class="inner"></div></div>
-            <div class="col-2"><div class="inner"></div></div>
-        </div>
-        <h4>sub grid</h4>
-        <div class="row">
-            <div class="col-5" style="background-color:#ddd;">
-                <p>
-                     --
-                </p>
-            </div>
-            <div class="col-5" style="background-color:#ddd;">
 
+    <div class="grid">
+        <div id="page">
+
+            <div id="header">
+                <div id="header-inner">
+                    <div class="row">
+                        <div class="col-3">
+                            <h1>N4css</h1>
+                        </div>
+                        <div class="col-7 right">
+                            <a href="#section-grid" class="lnk text-white big">Grid</a> <a href="#section-box" class="lnk text-white big">Box</a> <a href="#section-form" class="lnk text-white big">Form</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+
+                <h1 id="section-grid">Grid</h1>
+                <hr />
+                <h4>5 columns</h4>
                 <div class="row">
-                    <div class="col-5"><div class="inner-sub"></div></div>
-                    <div class="col-5"><div class="inner-sub"></div></div>
+                    <div class="col-2"><div class="inner"></div></div>
+                    <div class="col-2"><div class="inner"></div></div>
+                    <div class="col-2"><div class="inner"></div></div>
+                    <div class="col-2"><div class="inner"></div></div>
+                    <div class="col-2"><div class="inner"></div></div>
                 </div>
-
+                <h4>Nested Grid</h4>
                 <div class="row">
-                    <div class="col-3"><div class="inner-sub"></div></div>
-                    <div class="col-4"><div class="inner-sub"></div></div>
-                    <div class="col-3"><div class="inner-sub"></div></div>
-                </div>
-            </div>
-        </div>
-        <hr />
-        <h1>Components</h1>
-
-        <div class="row">
-            <div class="col-5">
-                <div class="box">
-                    <div class="heading">
-                        <h4>Box (Panel)</h4>
+                    <div class="col-5" style="background-color:#ddd;">
+                        <p>
+                            --
+                        </p>
                     </div>
+                    <div class="col-5" style="background-color:#ddd;">
+
+                        <div class="row">
+                            <div class="col-5"><div class="inner-sub"></div></div>
+                            <div class="col-5"><div class="inner-sub"></div></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-3"><div class="inner-sub"></div></div>
+                            <div class="col-4"><div class="inner-sub"></div></div>
+                            <div class="col-3"><div class="inner-sub"></div></div>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <h1>Components</h1>
+                <hr />
+                <h2 id="section-box">Box (Panel)</h2>
+                <div class="row">
+                    <div class="col-4">
+
+                        <h3>Box default</h3>
+
+                        <div class="box">
+                            <div class="heading">
+                                <h4>Title</h4>
+                            </div>
+                            <div class="body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula.  
+                            </div>
+                            <div class="footer">
+                                footer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h3>Darkbox</h3>
+                        <div class="box darkbox">
+                            <div class="heading">
+                                <h4>Title</h4>
+                            </div>
+                            <div class="body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula.  
+                            </div>
+                            <div class="footer">
+                                footer
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h3>Code box</h3>
+                        <div class="box codebox">
+                            <div class="heading">
+                                <h4>Javascript</h4>
+                            </div>
+                            <div class="body">
+<pre><code>//hello!
+(function(){
+    console.log('hello world!');
+})(); </code></pre>                   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <hr />
+                <h2 id="section-form">Form</h2>
+                <div class="box bluebox">
+                    
                     <div class="body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula. Aliquam congue dolor quis odio ultricies, nec suscipit erat elementum. Nunc id sem enim. Proin non tincidunt ex. Proin placerat varius aliquam. Donec in elementum dui, ut vehicula nibh. Etiam volutpat mattis urna sed faucibus. Quisque cursus quam eget egestas consequat. Mauris in enim dui. 
+                        <form class="frm">
+                            <label>Label</label>
+                            <input type="text" class="input" value="" placeholder="placeholder" />
+                            <label>Select</label>
+                            <select>
+                                <option>value 1</option>
+                                <option>value 2</option>
+                            </select>
+
+                            <label>TextArea</label>
+                            <textarea>textarea...</textarea>
+                        </form>
+                    </div>
+
+                    <div class="footer right">
+                        <button class="btn btnblue">Save</button>
                     </div>
                 </div>
-            </div>
-            <div class="col-5">
-                <div class="box darkbox">
-                    <div class="heading">
-                        <h4>Darkbox (Panel)</h4>
-                    </div>
+
+                <hr />
+                <h2 id="section-button">Button</h2>
+
+                <div class="box bluebox">
                     <div class="body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia, libero et auctor luctus, leo metus congue risus, vel sagittis turpis enim ut orci. Praesent vulputate dui nunc, at ornare velit lobortis vitae. Curabitur eget finibus lectus. Etiam leo ante, vehicula et mi non, gravida tempor mi. Ut finibus augue ligula. Aliquam congue dolor quis odio ultricies, nec suscipit erat elementum. Nunc id sem enim. Proin non tincidunt ex. Proin placerat varius aliquam. Donec in elementum dui, ut vehicula nibh. Etiam volutpat mattis urna sed faucibus. Quisque cursus quam eget egestas consequat. Mauris in enim dui. 
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <br />
-
-        <div class="row">
-            <div class="col-5">
-                <div class="box darkbox">
-                    <div class="heading">
-                        <h4>Button</h4>
-                    </div>
-                    <div class="body frm">
                         <button class="btn">Button Default</button> <button class="btn btndark">Button Dark</button> <button class="btn btnblue">Button Blue</button> 
                     </div>
                 </div>
 
-                <div class="box codebox">
-                    <div class="heading">
-                        <h4>Code</h4>
-                    </div>
-                    <div class="body frm">
-                        sdsdfs
-                        sdfsdf
-                        sdfsdf                        
-                        
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-5">
+                <hr />
+                <h2 id="section-simplelist">Simple List</h2>
+                <p>Simple list without any styling or margin.</p>
                 <div class="box bluebox">
-                    <div class="heading">
-                        <h4>Form</h4>
-                    </div>
-                    <div class="body frm">
-                        <label>Label</label>
-                        <input type="text" class="input" value="" placeholder="placeholder" />
-                        <label>Select</label>
-                        <select>
-                            <option>value 1</option>
-                            <option>value 1</option>
-                        </select>
+                    <div class="body">
+                        <ul class="simple-list">
+                            <li>Element 1</li>
+                            <li>Element 2</li>
+                            <li>Element 3</li>
+                            <li>Element 4</li>
+                        </ul>
 
-                        <label>TextArea</label>
-                        <textarea>textarea...</textarea>
                     </div>
                 </div>
+
             </div>
+
+
+
+            <footer>
+                <div id="footer-inner">
+                    Remi Guillemette 2016
+
+                </div>
+            </footer>
         </div>
-
-
-        <br /><br /><br /><br /><br />
-
     </div>
+
 </body>
 </html>

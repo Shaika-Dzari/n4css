@@ -7,6 +7,7 @@ $border-normal: #ccc;
 $border-dark: #444;
 $padding-normal: 10px;
 $padding-small: 5px;
+$color-lightgrey: #fcfcfc;
 $color-grey: #f8f8f8;
 $color-greyer: #dfdfdf;
 $color-darkgrey: #ccc;
@@ -19,7 +20,7 @@ $color-blue-1: #1872ab;
 $color-blue-2: #1b6ca0;
 $color-blue-3: #0d5f94;
 
-$font-bold-500: 600;
+$font-bold-600: 600;
 
 /* Box */
 .box {
@@ -32,12 +33,18 @@ $font-bold-500: 600;
 
         h1, h2, h3, h4, h5 {
             margin: 3px;
-            font-weight: 500;
+            font-weight: $font-bold-600;
         }
     } 
 
     .body {
         padding: $padding-normal;
+    }
+
+    .footer {
+        border-top: 1px solid $border-normal;
+        padding: $padding-small;
+        background-color: $color-lightgrey;
     }
 }
 
@@ -51,35 +58,35 @@ $font-bold-500: 600;
 }
 
 .box.bluebox {
-    border: 1px solid $border-dark;
+    
     .heading {
         background-color: $color-blue-1;
         color: $color-white;
-        border-bottom: 1px solid $border-dark;
     }
 }
 
 .box.codebox {
     border-left: 10px solid $color-blue-1;
-    border-right: 1px solid $color-dark;
-    border-top: 1px solid $border-dark;
-    border-bottom: 1px solid $border-dark;
 
     .heading {
-        background-color: $color-blue-1;
-        color: $color-white;
-        border-bottom: 1px solid $border-dark;
+        background-color: transparent;
+        color: $color-dark;
+        text-align: right;
     }
 
     .body {
-        overflow: auto;
+
+        pre {
+            white-space: pre;
+            overflow: auto;
+            
+        }
     }
 }
 
 
-/* Button */
+/* Button and link */
 button.btn {
-    transition: background-color 1s ease;
     border: 1px solid $color-darkgrey;
     background-color: $color-grey;
     cursor: pointer;
@@ -91,7 +98,7 @@ button.btn:hover {
 }
 
 button.btn:active {
-    color: $color-grey;
+    color: $color-darkgrey;
 }
 
 button.btn.btndark {
@@ -122,20 +129,26 @@ button.btn.btnblue:active {
     color: $color-blue-2;
 }
 
+a.lnk {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
 /* Form */
 
 .frm {
     
     label {
         display: block;
-        font-weight: $font-bold-500;
+        font-weight: $font-bold-600;
         margin: 5px 0 0 0;
     }
 
     input, select, textarea {
         display: block;
         border: 1px solid $color-darkgrey;
-        margin: 5px 0 0 0;
+        margin: 5px 0 10px 0;
         padding: 5px;
         width: 100%;
         box-sizing: border-box;
@@ -150,4 +163,13 @@ button.btn.btnblue:active {
         background-color: $color-grey;
     }
 
+}
+
+/* List */
+ul.simple-list {
+    list-style: none;
+    padding: 0;
+    li {
+        margin: 0;
+    }
 }

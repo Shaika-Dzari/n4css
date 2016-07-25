@@ -1,0 +1,36 @@
+.right {
+  text-align: right; }
+
+.center {
+  text-align: center; }
+
+/* Credit : http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clear-float:before,
+.clear-float:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clear-float:after {
+  clear: both; }
+
+.show {
+  display: block !important; }
+
+.hidden {
+  display: none !important; }
+
+.text-white {
+  color: #fff; }
+
+.text-blue {
+  color: #1872ab; }
+
+.big {
+  font-size: 1.1em; }
+
+.bigger {
+  font-size: 1.2em; }
+
+/*# sourceMappingURL=utilities.css.map */
